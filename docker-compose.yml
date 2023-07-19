@@ -19,6 +19,13 @@ services:
       - MYSQL_DATABASE=test_db
       - MYSQL_USER=dan
       - MYSQL_PASSWORD=secret
-      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=secret        
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql_server
 
     
